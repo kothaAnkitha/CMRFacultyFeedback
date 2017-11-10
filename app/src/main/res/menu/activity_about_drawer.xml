@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/about_clg_btn"
+        android:title="About College"
+        android:icon="@mipmap/ic_send_black_18dp">
+    </item>
+    <item android:id="@+id/about_rating_btn"
+        android:title="About Feedback"
+        android:icon="@mipmap/ic_star_rate_black_18dp">
+    </item>
+    <item android:id="@+id/about_us_btn"
+        android:title="About App"
+        android:icon="@mipmap/ic_code_black_24dp">
+    </item>
+</menu>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cmr.facultyfeedback.ankisami.cmrfacultyfeedback.Rating"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/test1"
+            android:text="Punctuality To Class"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r1"
+            android:layout_below="@+id/test1"
+            android:rating="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Communication Skills"
+            android:id="@+id/text2"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/r1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r2"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/text2"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use Of Examples"
+            android:textColor="@android:color/black"
+            android:id="@+id/text3"
+            android:textSize="20dp"
+            android:layout_below="@+id/r2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r3"
+            android:layout_below="@+id/text3"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preparation Of Teacher"
+            android:id="@+id/text4"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/r3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r4"
+            android:layout_below="@+id/text4"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organization Of Lecture"
+            android:textColor="@android:color/black"
+            android:id="@+id/text5"
+            android:textSize="20dp"
+            android:layout_below="@+id/r4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r5"
+            android:layout_below="@+id/text5"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pace Of Syllabus Coverage"
+            android:id="@+id/text6"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/r5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r6"
+            android:layout_below="@+id/text6"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest Stimulated By Teacher"
+            android:id="@+id/text7"
+            android:textSize="20dp"
+            android:layout_below="@+id/r6"
+            android:textColor="@android:color/black"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r7"
+            android:layout_below="@+id/text7"
+            android:rating="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Application Of Topics Covered"
+            android:id="@+id/text8"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/r7"
+            />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r8"
+            android:layout_below="@+id/text8"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friendly Interaction With Students"
+            android:id="@+id/text9"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/r8"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r9"
+            android:layout_below="@+id/text9"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fairness In Evaluation Of Tests"
+            android:id="@+id/text10"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/r9"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r10"
+            android:layout_below="@+id/text10"
+            android:layout_alignLeft="@+id/r1"
+            android:layout_alignStart="@+id/r1"
+            android:rating="1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/b1"
+            android:text="SUBMIT"
+            android:background="@color/colorAccent"
+
+            android:layout_below="@+id/r10"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+</ScrollView>

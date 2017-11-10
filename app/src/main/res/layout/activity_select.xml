@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cmr.facultyfeedback.ankisami.cmrfacultyfeedback.Select"
+    android:background="@drawable/walle">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACADAMICS"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:id="@+id/acadamics"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WORKSHOP"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:id="@+id/seminar"
+        android:layout_below="@+id/acadamics"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp" />
+
+
+</RelativeLayout>

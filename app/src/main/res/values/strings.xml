@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">CMR Faculty Feedback</string>
+    <string-array name="yes_no">
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="yearspinner">
+        <item>IV year</item>
+        <item>III year</item>
+        <item>II year</item>
+        <item>I year</item>
+    </string-array>
+    <string-array name="IVspinner">
+        <item>LINUX PROGRAMMING</item>
+        <item>DESIGN PATTERNS</item>
+        <item>CLOUD COMPUTING</item>
+        <item>DATA WAREHOUSE AND DATA MINING</item>
+        <item>MOBILE COMPUTING</item>
+        <item>LP LAB</item>
+        <item>DWDM LAB</item>
+        <item>INFORMATION RETREIVAL SYSTEM</item>
+    </string-array>
+    <string-array name="IIIspinner">
+        <item>PRINCIPLES OF PROGRAMMING LANGUAGE</item>
+        <item>SOFTWARE ENGINEERING</item>
+        <item>COMPILER DESIGN</item>
+        <item>OPERATING SYSTEMS</item>
+        <item>OS LAB</item>
+        <item>CD LAB</item>
+        <item>COMPUTER NETWORKS</item>
+        <item>INTELLECTUAL PROPERTY RIGHTS</item>
+    </string-array>
+    <string-array name="IIspinner">
+        <item>MATHEMATICS-IV</item>
+        <item>DATA STRUCTURES THROUGH C++</item>
+        <item>MATHEMATICAL FOUNDATIONS OF COMPUTER SCIENCE</item>
+        <item>DIGITAL LOGIC DESIGN</item>
+        <item>OBJECT ORIENTED PROGRAMMING THROUGH JAVA</item>
+        <item>DS LAB</item>
+        <item>IT WORKSHOP</item>
+        <item>JAVA LAB</item>
+        <item>ENVIRONMENTAL STUDIES</item>
+    </string-array>
+    <string-array name="Ispinner">
+        <item>MATHEMATICS-I</item>
+        <item>ENGINEERING CHEMISTRY</item>
+        <item>ENGINEERING PHYSICS-I</item>
+        <item>PROFESSIONAL COMMUNICATION IN ENGLISH</item>
+        <item>ENGINEERING MECHANICS</item>
+        <item>BASIC ELECTRICAL AND ELECTRONICS</item>
+        <item>ENGLISH LAB</item>
+        <item>ENGINEERING WORKSHOP</item>
+    </string-array>
+    <string-array name="sectionspinner">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+    <string name="title_activity_starting">StartingActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_college">College</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_rate">Rate</string>
+
+
+</resources>

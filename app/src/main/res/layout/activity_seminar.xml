@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cmr.facultyfeedback.ankisami.cmrfacultyfeedback.Seminar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/tview1"
+            android:text="Name of the Guest Faculty:"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp" />
+        <EditText
+            android:id="@+id/editext1"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tview1"
+            android:layout_alignBottom="@+id/tview1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/tview2"
+            android:textColor="@android:color/black"
+            android:text="Lecture Topic:"
+            android:layout_below="@+id/tview1"
+            android:layout_marginTop="12dp" />
+        <EditText
+            android:id="@+id/editext2"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_below="@+id/tview1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:id="@+id/picDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="Select Date"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/tview2"
+            />
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tdate"
+            android:paddingRight="50dp"
+            android:paddingLeft="40dp"
+            android:textSize="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/picDate" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tview0"
+            android:paddingTop="15dp"
+            android:text="Topic of Guest Lecture:Was that good?"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/picDate"/>
+        <Spinner
+            android:id="@+id/spin"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+
+            android:layout_below="@+id/tview0"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:id="@+id/tview3"
+            android:textColor="@android:color/black"
+            android:text="Guest Talk:Was it Understandable?"
+            android:textSize="20sp"
+            android:layout_below="@+id/spin"/>
+        <Spinner
+            android:id="@+id/spin1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tview3"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tview4"
+            android:textColor="@android:color/black"
+            android:paddingTop="10dp"
+            android:text="Was the duration adequate?"
+            android:textSize="20sp"
+            android:layout_below="@+id/spin1"/>
+        <Spinner
+            android:id="@+id/spin2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tview4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tview5"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/black"
+            android:text="Do you like to invite guest faculty on similar or other topics?"
+            android:textSize="20sp"
+            android:layout_below="@+id/spin2"/>
+        <Spinner
+            android:id="@+id/spin3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tview5"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tview6"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/black"
+            android:text="Do you like to have further Extension lecture on this topic?"
+            android:textSize="20sp"
+            android:layout_below="@+id/spin3"/>
+        <Spinner
+            android:id="@+id/spin4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tview6"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trate"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/black"
+            android:text="Overall rating of the guest lecture"
+            android:textSize="20sp"
+            android:layout_below="@+id/spin4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+        <RatingBar
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/trate"
+            />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="SUBMIT"
+            android:textColor="@android:color/white"
+            android:background="@color/colorAccent"
+            android:layout_below="@+id/rate"
+            android:layout_alignStart="@+id/tdate" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
