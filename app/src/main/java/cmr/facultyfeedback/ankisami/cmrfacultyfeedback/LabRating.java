@@ -13,7 +13,7 @@ import com.firebase.client.Firebase;
 public class LabRating extends AppCompatActivity {
     private Firebase mref;
     private Button submits;
-    private String years,subjects,sections;
+    private String years,subjects,sections,branch;
     private RatingBar r1,r2,r3,r4,r5;
     private TextView t1,t2,t3,t4,t5;
     float total=0;
@@ -54,29 +54,70 @@ public class LabRating extends AppCompatActivity {
                 a[4]=r5.getRating();
                   years = String.valueOf(YearActivity.getYear());
                 int year=YearActivity.getId();
-
+                branch=String.valueOf(Branch.getbranch());
+                String rollnumber = getIntent().getExtras().getString("roll");
+                if(rollnumber.substring(7,8).equals("5"))
+                {
                 if(year==4){
                     subjects = String.valueOf(Fourthyearsubjects.getSubject());
                 }else if(year==3 ||year == 5 ){
                     subjects = String.valueOf(Thirdyearsubjects.getSubject());
                 }else if(year==2||year == 6) {
                     subjects = String.valueOf(Secondyearsubjects.getSubject());
-                }else{
+                }else {
                     subjects = String.valueOf(Firstyearsubjects.getSubject());
-
                 }
+                }
+                if(rollnumber.substring(7,8).equals("4")) {
+
+                    if (year == 4) {
+                        subjects = String.valueOf(EceSubjects.getSubject());
+                    } else if (year == 3) {
+                        subjects = String.valueOf(Ecethirdsubjects.getSubject());
+                    } else if (year == 2) {
+                        subjects = String.valueOf(Ecesecondsubjects.getSubject());
+                    } else {
+                        subjects = String.valueOf(Firstyearsubjects.getSubject());
+                    }
+                }
+                if(rollnumber.substring(7,8).equals("1")) {
+
+                    if (year == 4) {
+                        subjects = String.valueOf(CivilSubjects.getSubject());
+                    } else if (year == 3 ) {
+                        subjects = String.valueOf(Civilthirdsubjects.getSubject());
+                    } else if (year == 2 ) {
+                        subjects = String.valueOf(Civilsecondsubjects.getSubject());
+                    } else {
+                        subjects = String.valueOf(Firstyearsubjects.getSubject());
+
+                    }
+                }
+                if(rollnumber.substring(7,8).equals("3")) {
+
+                    if (year == 4) {
+                        subjects = String.valueOf(MechSubjects.getSubject());
+                    } else if (year == 3 ) {
+                        subjects = String.valueOf(Mechthirdsubjects.getSubject());
+                    } else if (year == 2 ) {
+                        subjects = String.valueOf(Mechsecondsubjects.getSubject());
+                    } else {
+                        subjects = String.valueOf(Firstyearsubjects.getSubject());
+
+                    }
+                }
+
                 sections = String.valueOf(Section.getSection());
-                String rollnumber = getIntent().getExtras().getString("roll");
                 for(i=0;i<5;i++)
                 {
-                    Firebase mchi = mref.child(years).child(sections).child(subjects).child(rollnumber).child(b[i]);
+                    Firebase mchi = mref.child(branch).child(years).child(sections).child(subjects).child(rollnumber).child(b[i]);
                     mchi.setValue(a[i]);
                 }
                 for (i=0;i<5;i++)
                 {
                     total=total+a[i];
                 }
-                Firebase mchi = mref.child(years).child(sections).child(subjects).child(rollnumber).child("total");
+                Firebase mchi = mref.child(branch).child(years).child(sections).child(subjects).child(rollnumber).child("total");
                 mchi.setValue(total);
                 Toast.makeText(LabRating.this, "Rating Submitted", Toast.LENGTH_SHORT).show();
                 Intent c=new Intent(LabRating.this,Conclusion.class);

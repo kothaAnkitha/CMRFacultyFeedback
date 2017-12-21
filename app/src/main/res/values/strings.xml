@@ -10,6 +10,13 @@
         <item>II year</item>
         <item>I year</item>
     </string-array>
+    <string-array name="branchspinner">
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>MECH</item>
+        <item>CIVIL</item>
+    </string-array>
+
     <string-array name="IVspinner">
         <item>LINUX PROGRAMMING</item>
         <item>DESIGN PATTERNS</item>

@@ -12,7 +12,44 @@
         android:background="@color/colorAccent"
         android:textColor="@android:color/white"
         android:text="CSE"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/ece"
+        android:layout_marginTop="135dp" />
+    <Button
+        android:id="@+id/ece"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="11dp"
+        android:text="ECE"
+        android:layout_below="@+id/cse"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/mech"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:text="MECH"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/ece"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/civil"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:text="CIVIL"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/mech"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

@@ -12,7 +12,7 @@ import com.firebase.client.Firebase;
  * Created by snehareddy on 9/1/2017.
  */
 public class YearActivity extends AppCompatActivity {
-    private Button year;
+    private Button year,mece,mmech,mcivil;
     private  static int id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,12 @@ public class YearActivity extends AppCompatActivity {
         setContentView(R.layout.activity_branch);
         Firebase.setAndroidContext(this);
         setTitle("Year");
+        mece=(Button)findViewById(R.id.ece);
+        mece.setVisibility(View.INVISIBLE);
+        mmech=(Button)findViewById(R.id.mech);
+       mmech.setVisibility(View.INVISIBLE);
+        mcivil=(Button)findViewById(R.id.civil);
+        mcivil.setVisibility(View.INVISIBLE);
     year=(Button)findViewById(R.id.cse);
     final String rollnum=getIntent().getExtras().getString("roll").trim().toLowerCase();
         if(rollnum.equals("147r1a05c2")){

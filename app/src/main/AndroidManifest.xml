@@ -56,6 +56,25 @@
             android:name=".Rate"
             android:label="@string/title_activity_rate"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MechSubjects" />
+        <activity android:name=".EceSubjects" />
+        <activity android:name=".CivilSubjects" />
+        <activity android:name=".Mechsecondsubjects" />
+        <activity android:name=".Mechthirdsubjects" />
+        <activity android:name=".Ecesecondsubjects" />
+        <activity android:name=".Ecethirdsubjects" />
+        <activity android:name=".Civilsecondsubjects" />
+        <activity android:name=".Civilthirdsubjects" />
+        <activity android:name=".CivilReport" />
+        <activity android:name=".EceReport" />
+        <activity android:name=".MechReport">
+        </activity>
+        <activity android:name=".CivilSecondReport"/>
+        <activity android:name=".CivilThirdReport"/>
+        <activity android:name=".EceSecondReport"/>
+        <activity android:name=".EceThirdReport"/>
+        <activity android:name=".MechSecondReport"/>
+        <activity android:name=".MechThirdReport"/>
     </application>
 
 </manifest>

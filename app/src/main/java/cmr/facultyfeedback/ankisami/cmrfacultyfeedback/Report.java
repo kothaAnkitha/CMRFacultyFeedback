@@ -50,8 +50,9 @@ public class Report extends AppCompatActivity {
         textview26=(TextView)findViewById(R.id.textView26);
         final String yr=getIntent().getExtras().getString("year");
         final String  sect=getIntent().getExtras().getString("section");
+        final String  br=getIntent().getExtras().getString("branch");
 
-        mref=new Firebase("https://cmrfacultyfeedback.firebaseio.com/").child(yr).child(sect);
+        mref=new Firebase("https://cmrfacultyfeedback.firebaseio.com/").child(br).child(yr).child(sect);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -179,6 +180,7 @@ public class Report extends AppCompatActivity {
                         i.putExtra("ll",ll);
                         i.putExtra("opt",optional);
                         i.putExtra("year",yr);
+                        i.putExtra("branch",br);
                         startActivity(i);
                     }
                 });

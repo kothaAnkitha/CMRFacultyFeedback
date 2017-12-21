@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="select year"
+        android:text="Select Year"
         android:id="@+id/textView4"
         android:textSize="30sp"
         android:textColor="@android:color/black"
@@ -27,13 +27,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="select section"
+        android:text="Select Section"
         android:textColor="@android:color/black"
         android:id="@+id/textView5"
         android:textSize="30sp"
         android:layout_above="@+id/sectionspinner"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="41dp" />
+        android:layout_marginBottom="31dp" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -41,6 +41,25 @@
         android:id="@+id/sectionspinner"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Branch"
+        android:textColor="@android:color/black"
+        android:id="@+id/text"
+        android:textSize="30sp"
+        android:layout_below="@+id/sectionspinner"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/branchspinner"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="25dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
 
     <Button
         android:layout_width="wrap_content"

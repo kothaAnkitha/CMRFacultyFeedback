@@ -53,7 +53,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                     if ((roll.equals("15n41a0505")||roll.equals("15401a0510")||roll.equals("15401a0521")||
                             roll.equals("137r1a0540")  ||   roll.startsWith("147") || roll.startsWith("157") ||
-                            roll.startsWith("167") || roll.startsWith("177")) && (roll.substring(5,8).equals("a05"))) {
+                            roll.startsWith("167") || roll.startsWith("177")) && (roll.substring(5,8).equals("a05"))||
+                            (roll.substring(5,8).equals("a04"))||(roll.substring(5,8).equals("a01"))||(roll.substring(5,8).equals("a03"))) {
 
                         if (roll.length() == 10) {
 

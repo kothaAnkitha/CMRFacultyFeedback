@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -51,8 +52,10 @@ public class Firstyearreport extends AppCompatActivity {
         textview26 = (TextView) findViewById(R.id.textView26);
         final String yr = getIntent().getExtras().getString("year");
         final String sect = getIntent().getExtras().getString("section");
+        final String  br=getIntent().getExtras().getString("branch");
 
-        mref = new Firebase("https://cmrfacultyfeedback.firebaseio.com/").child(yr).child(sect);
+
+        mref = new Firebase("https://cmrfacultyfeedback.firebaseio.com/").child(br).child(yr).child(sect);
         textview8.setText("MATHEMATICS-I");
         textview11.setText("ENGINEERING CHEMISTRY");
         textview13.setText("ENGINEERING PHYSICS-I");
@@ -164,6 +167,8 @@ public class Firstyearreport extends AppCompatActivity {
                         }
                     }
                 }
+                Toast.makeText(Firstyearreport.this, "The number of students given the rating are"+k, Toast.LENGTH_SHORT).show();
+
                 final String lp = textview10.getText().toString();
                 final String cc = textview12.getText().toString();
                 final String dp = textview14.getText().toString();
@@ -188,6 +193,7 @@ public class Firstyearreport extends AppCompatActivity {
                         i.putExtra("ll",ll);
                         i.putExtra("opt",optional);
                         i.putExtra("year",yr);
+                        i.putExtra("branch",br);
                         startActivity(i);
                     }
                 });

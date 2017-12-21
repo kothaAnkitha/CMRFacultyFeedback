@@ -13,7 +13,7 @@ public class Rating extends AppCompatActivity {
     private Firebase mref;
     private TextView text2, text1, text3, text4, text5, text6, text7, text8, text9, text10;
     private RatingBar r1, r2, r3, r4, r5, r6, r7, r8, r9, r10;
-    private String years,subjects,sections;
+    private String years,subjects,sections,branch;
     private Button b1;
     float a[] = new float[10];
     String b[] = new String[10];
@@ -28,20 +28,62 @@ public class Rating extends AppCompatActivity {
         Firebase.setAndroidContext(this);
         mref=new Firebase("https://cmrfacultyfeedback.firebaseio.com/");
         years = String.valueOf(YearActivity.getYear());
+        branch=String.valueOf(Branch.getbranch());
         int year=YearActivity.getId();
-
-        if(year==4){
-            subjects = String.valueOf(Fourthyearsubjects.getSubject());
-        }else if(year==3 ||year == 5 ){
-            subjects = String.valueOf(Thirdyearsubjects.getSubject());
-        }else if(year==2||year == 6) {
-            subjects = String.valueOf(Secondyearsubjects.getSubject());
-        }else{
-            subjects = String.valueOf(Firstyearsubjects.getSubject());
-
-        }
-        sections = String.valueOf(Section.getSection());
         final String rollnumber = getIntent().getExtras().getString("roll");
+
+         if(rollnumber.substring(7,8).equals("5")) {
+
+          if (year == 4) {
+            subjects = String.valueOf(Fourthyearsubjects.getSubject());
+           } else if (year == 3 || year == 5) {
+            subjects = String.valueOf(Thirdyearsubjects.getSubject());
+           } else if (year == 2 || year == 6) {
+              subjects = String.valueOf(Secondyearsubjects.getSubject());
+           } else {
+            subjects = String.valueOf(Firstyearsubjects.getSubject());
+           }
+       }
+        if(rollnumber.substring(7,8).equals("4")) {
+
+            if (year == 4) {
+                subjects = String.valueOf(EceSubjects.getSubject());
+            } else if (year == 3) {
+                subjects = String.valueOf(Ecethirdsubjects.getSubject());
+            } else if (year == 2) {
+                subjects = String.valueOf(Ecesecondsubjects.getSubject());
+            } else {
+                subjects = String.valueOf(Firstyearsubjects.getSubject());
+            }
+        }
+        if(rollnumber.substring(7,8).equals("1")) {
+
+            if (year == 4) {
+                subjects = String.valueOf(CivilSubjects.getSubject());
+            } else if (year == 3 ) {
+                subjects = String.valueOf(Civilthirdsubjects.getSubject());
+            } else if (year == 2 ) {
+                subjects = String.valueOf(Civilsecondsubjects.getSubject());
+            } else {
+                subjects = String.valueOf(Firstyearsubjects.getSubject());
+
+            }
+        }
+        if(rollnumber.substring(7,8).equals("3")) {
+
+            if (year == 4) {
+                subjects = String.valueOf(MechSubjects.getSubject());
+            } else if (year == 3 ) {
+                subjects = String.valueOf(Mechthirdsubjects.getSubject());
+            } else if (year == 2 ) {
+                subjects = String.valueOf(Mechsecondsubjects.getSubject());
+            } else {
+                subjects = String.valueOf(Firstyearsubjects.getSubject());
+
+            }
+        }
+
+        sections = String.valueOf(Section.getSection());
         r1 = (RatingBar) findViewById(R.id.r1);
         text1 = (TextView) findViewById(R.id.test1);
         b1 = (Button) findViewById(R.id.b1);
@@ -89,15 +131,14 @@ public class Rating extends AppCompatActivity {
                 a[8] = r9.getRating();
                 a[9] = r10.getRating();
 
-
                 for (i = 0; i < 10; i++) {
-                    Firebase mchi = mref.child(years).child(sections).child(subjects).child(rollnumber).child(b[i]);
+                    Firebase mchi = mref.child(branch).child(years).child(sections).child(subjects).child(rollnumber).child(b[i]);
                     mchi.setValue(a[i]);
                 }
                 for (i = 0; i < 10; i++) {
                     total = total + a[i];
                 }
-                Firebase mchi = mref.child(years).child(sections).child(subjects).child(rollnumber).child("total");
+                Firebase mchi = mref.child(branch).child(years).child(sections).child(subjects).child(rollnumber).child("total");
                 mchi.setValue(total);
                 Intent s = new Intent(Rating.this, Conclusion.class);
                 startActivity(s);
